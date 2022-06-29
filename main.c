@@ -1,18 +1,20 @@
 #include <stdio.h>
 
-#define swap(t, x, y) { \
-    t temp;             \
-    temp = x;           \
-    x = y;              \
-    y = temp;           \
-}                       \
+
+void strcatt(char *s, char *t);
 
 int main() {
-    int x = 10;
-    int y = 20;
-    swap(int, x, y);
-    printf("%d", x);
     
+    char s[100] = "hello";
+    char t[] = "lol";
+    strcatt(s, t);
+    printf("%s", s);
+
     return 0;
+}
+
+void strcatt(char *s, char *t) {
+    while (*++s);
+    while((*s++ = *t++));
 }
 
