@@ -1,27 +1,18 @@
 #include <stdio.h>
-#include <string.h>
 
-
-
-void reverse(char s[]);
+#define swap(t, x, y) { \
+    t temp;             \
+    temp = x;           \
+    x = y;              \
+    y = temp;           \
+}                       \
 
 int main() {
-
-    char s[] = "hello";
-    reverse(s);
-    printf("%s", s);
+    int x = 10;
+    int y = 20;
+    swap(int, x, y);
+    printf("%d", x);
     
     return 0;
 }
 
-void reverse(char s[]) {
-    static int i;
-    static int j;
-
-    if (s[i] != 0) {
-        char c = s[i++];
-        reverse(s);
-
-        s[j++] = c;
-    }
-}
