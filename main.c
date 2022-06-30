@@ -31,16 +31,3 @@ void readlines(char *ptrarr[], char lines[]) {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
