@@ -1,6 +1,2 @@
-#include <stdio.h>
-
-
-int main() {
-    int c = 10;
-}
+word fuck
+word
