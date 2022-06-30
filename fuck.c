@@ -1,2 +1,0 @@
-word fuck
-word
