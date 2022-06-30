@@ -1,23 +1,30 @@
 #include <stdio.h>
 
 
-char* strncopy(char *s, char *t, int n);
+
+char *strngcat(char *s, char *t, int n);
 
 int main() {
     
+    char s[100] = "sidemen";
     char t[] = "ksi";
-    char s[100];
-    char *ptr = strncopy(s, t, 23);
+    char *ptr = strngcat(s, t, 3);
     printf("%s", ptr);
+    
 
     return 0;
 }
 
-char *strncopy(char *s, char *t, int n) {
-    char *temp = s;
+char *strngcat(char *s, char *t, int n) {
+    char *ret = s;
+    while(*s++);
+    --s;
     while(n-- && (*s++ = *t++));
-    return temp;
+    *s = 0;
+    return ret;
 }
+
+
 
 
 
